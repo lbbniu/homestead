@@ -13,9 +13,9 @@ class Homestead
     config.ssh.forward_agent = true
 
     # Configure The Box
-    config.vm.define settings["name"] ||= "homestead-7"
-    config.vm.box = settings["box"] ||= "laravel/homestead"
-    config.vm.box_version = settings["version"] ||= ">= 0.4.0"
+    config.vm.define settings["name"] ||= "lbbstead-113"
+    config.vm.box = settings["box"] ||= "lbbniu"
+    #config.vm.box_version = settings["version"] ||= ">= 0.4.0"
     config.vm.hostname = settings["hostname"] ||= "homestead"
 
     # Configure A Private Network IP
@@ -30,7 +30,7 @@ class Homestead
 
     # Configure A Few VirtualBox Settings
     config.vm.provider "virtualbox" do |vb|
-      vb.name = settings["name"] ||= "homestead-7"
+      vb.name = settings["name"] ||= "lbbstead-113"
       vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "2048"]
       vb.customize ["modifyvm", :id, "--cpus", settings["cpus"] ||= "1"]
       vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -41,7 +41,7 @@ class Homestead
     # Configure A Few VMware Settings
     ["vmware_fusion", "vmware_workstation"].each do |vmware|
       config.vm.provider vmware do |v|
-        v.vmx["displayName"] = settings["name"] ||= "homestead-7"
+        v.vmx["displayName"] = settings["name"] ||= "lbbstead-113"
         v.vmx["memsize"] = settings["memory"] ||= 2048
         v.vmx["numvcpus"] = settings["cpus"] ||= 1
         v.vmx["guestOS"] = "ubuntu-64"
