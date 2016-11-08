@@ -10,12 +10,12 @@ keys:
     - ./.ssh/lbbstead
 
 folders:
-    - map: ./Code
-      to: /home/vagrant/Code
+    - map: ./coding
+      to: /coding
 
 sites:
     - map: lbbniu.app
-      to: /home/vagrant/Code/lbbniu/public
+      to: /coding/lbbniu/public
 
 databases:
     - homestead
